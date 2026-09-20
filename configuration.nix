@@ -181,10 +181,10 @@ virtualisation.podman = {
    services.openssh.enable = true;
 
   # Open ports in the firewall.
-   networking.firewall.allowedTCPPorts = [ 80 443 ];
-   networking.firewall.allowedUDPPorts = [ ... ];
+   #networking.firewall.allowedTCPPorts = [ 80 443 ];
+  #networking.firewall.allowedUDPPorts = [ ... ];
   # Or disable the firewall altogether.
-   networking.firewall.enable = true;
+   networking.firewall.enable = false;
 
 
   system.stateVersion = "26.05"; # Did you read the comment?
