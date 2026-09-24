@@ -7,8 +7,8 @@
       ./1password.nix
       #./niri.nix
      # ./cosmic.nix
-      #./gnome.nix
-      ./kde.nix
+      ./gnome.nix
+      #./kde.nix
     ];
 
   # Use the systemd-boot EFI boot loader.
@@ -146,6 +146,7 @@
     swayidle
     keepassxc
     pkgs.xwayland-satellite
+    gnomeExtensions.dash-to-dock
   ];
 
   # 3. Optimization: Prevent systemd from waiting for network online
