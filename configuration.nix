@@ -186,7 +186,7 @@ virtualisation.podman = {
    #networking.firewall.allowedTCPPorts = [ 80 443 ];
   #networking.firewall.allowedUDPPorts = [ ... ];
   # Or disable the firewall altogether.
-   networking.firewall.enable = false;
+  #networking.firewall.enable = false; #enabled in tailscale module
 
 
   system.stateVersion = "26.05"; # Did you read the comment?
