@@ -9,6 +9,7 @@
      # ./cosmic.nix
       ./gnome.nix
       #./kde.nix
+	./tailscale.nix
     ];
 
   # Use the systemd-boot EFI boot loader.
