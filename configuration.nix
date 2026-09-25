@@ -10,6 +10,7 @@
       ./gnome.nix
       #./kde.nix
 	./tailscale.nix
+	./fprintd.nix
     ];
 
   # Use the systemd-boot EFI boot loader.
@@ -19,6 +20,15 @@
   # Use latest kernel.
   boot.kernelPackages = pkgs.linuxPackages_latest;
  
+boot.initrd.luks.devices = {
+  "luks-0dbf0d87-e55e-4fc7-9a58-08d910e51934" = {
+    device = "/dev/disk/by-uuid/0dbf0d87-e55e-4fc7-9a58-08d910e51934";
+  };
+  # ADD THIS BLOCK FOR YOUR SWAP:
+  "luks-5f51a56d-579e-4370-a9db-4879d37c6a50" = {
+    device = "/dev/disk/by-uuid/5f51a56d-579e-4370-a9db-4879d37c6a50";
+  };
+};
  networking.hostName = "StinkPadX13"; # Define your hostname.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
 
@@ -104,6 +114,9 @@
 	htop
 	bat
 	ns-usbloader
+	dosbox
+	steam-run
+	daggerfall-unity
     ];
   };
 
