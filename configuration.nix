@@ -115,8 +115,6 @@ boot.initrd.luks.devices = {
 	bat
 	ns-usbloader
 	dosbox
-	steam-run
-	daggerfall-unity
     ];
   };
 
